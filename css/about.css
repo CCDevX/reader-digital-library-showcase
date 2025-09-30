@@ -27,7 +27,7 @@
 
 .about-section-header .section-border {
     width: 100%;
-    max-width: 25rem;
+    max-width: 15.625rem;
     margin: var(--space-lg) auto;
 }
 
@@ -42,16 +42,16 @@
     grid-template-columns: 1fr;
     gap: var(--space-xl);
     width: 100%;
-    max-width: 30rem;
+    max-width: 18.75rem;
     margin-bottom: var(--space-4xl);
 }
 
 .feature {
     width: 100%;
-    height: 18rem;
+    height: 11.25rem;
     background-color: #181818;
-    border-radius: 2rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 1.25rem;
+    box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,14 +64,14 @@
 }
 
 .feature:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
 }
 
 .feature::before {
     content: '';
-    width: 12rem;
-    height: 12rem;
+    width: 7.5rem;
+    height: 7.5rem;
     background-color: #1f1f1f;
     border-radius: 50%;
     position: absolute;
@@ -100,7 +100,7 @@
 /* Team Section - Mobile */
 .team {
     width: 100%;
-    min-height: 60rem;
+    min-height: 37.5rem;
     background: linear-gradient(
             to bottom,
             rgba(33, 33, 33, 0.8),
@@ -121,7 +121,7 @@
     font-family: 'Kaushan Script', cursive;
     font-size: var(--font-4xl);
     color: var(--main-color);
-    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.5);
     margin-bottom: var(--space-3xl);
     text-align: center;
 }
@@ -141,14 +141,14 @@
 }
 
 .member img {
-    width: 20rem;
-    height: 20rem;
+    width: 12.5rem;
+    height: 12.5rem;
     object-fit: cover;
     border-radius: 50%;
     filter: grayscale(100%);
     cursor: pointer;
     transition: filter 0.5s ease, transform 0.3s ease;
-    border: 0.3rem solid rgba(50, 176, 206, 0.3);
+    border: 0.1875rem solid rgba(50, 176, 206, 0.3);
 }
 
 .member img:hover {
@@ -160,7 +160,7 @@
     font-size: var(--font-md);
     text-transform: uppercase;
     color: var(--text-primary);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.0625rem;
     margin-top: var(--space-lg);
     font-weight: 500;
 }
@@ -169,7 +169,7 @@
     font-size: var(--font-sm);
     text-transform: uppercase;
     color: var(--main-color);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.0625rem;
     margin-top: var(--space-xs);
 }
 
@@ -195,16 +195,16 @@
 @media (min-width: 36em) {
     .about-page-features {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 60rem;
+        max-width: 37.5rem;
         gap: var(--space-xl);
     }
 
     .feature {
-        height: 20rem;
+        height: 12.5rem;
     }
 
     .feature span {
-        font-size: 5rem;
+        font-size: 3.125rem;
     }
 
     .members {
@@ -215,8 +215,8 @@
     }
 
     .member img {
-        width: 22rem;
-        height: 22rem;
+        width: 13.75rem;
+        height: 13.75rem;
     }
 }
 
@@ -228,11 +228,11 @@
 
     .about-page-features {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 70rem;
+        max-width: 43.75rem;
     }
 
     .feature {
-        height: 22rem;
+        height: 13.75rem;
     }
 
     .feature h3 {
@@ -240,12 +240,12 @@
     }
 
     .team {
-        min-height: 70rem;
+        min-height: 43.75rem;
         padding: var(--space-4xl);
     }
 
     .team h2 {
-        font-size: 6rem;
+        font-size: 3.75rem;
     }
 
     .members {
@@ -254,8 +254,8 @@
     }
 
     .member img {
-        width: 24rem;
-        height: 24rem;
+        width: 15rem;
+        height: 15rem;
     }
 }
 
@@ -275,76 +275,76 @@
 
     .about-page-features {
         grid-template-columns: repeat(4, 1fr);
-        max-width: 100rem;
+        max-width: 62.5rem;
         gap: var(--space-lg);
     }
 
     .feature {
-        height: 20rem;
+        height: 12.5rem;
     }
 
     /* Effet décalé réintroduit sur desktop */
     .feature:nth-child(2),
     .feature:nth-child(6) {
-        transform: translateY(3rem);
+        transform: translateY(1.875rem);
     }
 
     .feature:nth-child(3),
     .feature:nth-child(7) {
-        transform: translateY(6rem);
+        transform: translateY(3.75rem);
     }
 
     .feature:nth-child(4),
     .feature:nth-child(8) {
-        transform: translateY(9rem);
+        transform: translateY(5.625rem);
     }
 
     .feature:hover:nth-child(2),
     .feature:hover:nth-child(6) {
-        transform: translateY(2.5rem);
+        transform: translateY(1.5625rem);
     }
 
     .feature:hover:nth-child(3),
     .feature:hover:nth-child(7) {
-        transform: translateY(5.5rem);
+        transform: translateY(3.4375rem);
     }
 
     .feature:hover:nth-child(4),
     .feature:hover:nth-child(8) {
-        transform: translateY(8.5rem);
+        transform: translateY(5.3125rem);
     }
 
     .feature::before {
-        width: 15rem;
-        height: 15rem;
+        width: 9.375rem;
+        height: 9.375rem;
         top: -40%;
     }
 
     .feature span {
-        font-size: 6rem;
+        font-size: 3.75rem;
     }
 
     .team {
         width: 200%;
-        height: 120rem;
+        height: 75rem;
         clip-path: polygon(100% 50%, 0 0, 0 100%);
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.9);
+        box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.9);
         margin-top: var(--space-4xl);
     }
 
     .team h2 {
-        font-size: 8rem;
-        margin-top: -10rem;
+        font-size: 5rem;
+        margin-top: -6.25rem;
         margin-bottom: var(--space-4xl);
     }
 
     .member img {
-        width: 26rem;
-        height: 26rem;
+        width: 16.25rem;
+        height: 16.25rem;
     }
 
     .footer-about {
-        margin-top: -35rem;
+        margin-top: -21.875rem;
     }
 
     .footer-about .footer-header {
@@ -366,26 +366,23 @@
     }
 
     .about-page-features {
-        max-width: 120rem;
+        max-width: 75rem;
     }
 
     .team {
-        height: 140rem;
+        height: 87.5rem;
     }
 
     .team h2 {
-        font-size: 10rem;
-        margin-top: -15rem;
+        font-size: 6.25rem;
+        margin-top: -9.375rem;
     }
 
     .member img {
-        width: 27rem;
-        height: 27rem;
+        width: 16.875rem;
+        height: 16.875rem;
     }
 
-    .footer-about {
-        margin-top: -50rem;
-    }
 
     .footer-about .footer-header {
         transform: translateX(70%);
@@ -406,7 +403,7 @@
 /* Ultra Wide (1600px+) */
 @media (min-width: 100em) {
     .about-page-features {
-        max-width: 140rem;
+        max-width: 87.5rem;
     }
 
     .about-section-header {

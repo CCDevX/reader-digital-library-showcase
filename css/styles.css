@@ -19,30 +19,29 @@
     --text-secondary: #ccc;
     --border-color: #333;
 
-    /* Responsive font sizes */
-    --font-xs: 1.4rem;
-    --font-sm: 1.6rem;
-    --font-md: 1.8rem;
-    --font-lg: 2.2rem;
-    --font-xl: 2.6rem;
-    --font-2xl: 3.2rem;
-    --font-3xl: 4.2rem;
-    --font-4xl: 6rem;
-    --font-5xl: 8rem;
+    /* Responsive font sizes - Adaptées pour 1rem = 16px */
+    --font-xs: 0.875rem;   /* 14px */
+    --font-sm: 1rem;       /* 16px */
+    --font-md: 1.125rem;   /* 18px */
+    --font-lg: 1.375rem;   /* 22px */
+    --font-xl: 1.625rem;   /* 26px */
+    --font-2xl: 2rem;      /* 32px */
+    --font-3xl: 2.625rem;  /* 42px */
+    --font-4xl: 3.75rem;   /* 60px */
+    --font-5xl: 5rem;      /* 80px */
 
-    /* Responsive spacing */
-    --space-xs: 0.5rem;
-    --space-sm: 1rem;
-    --space-md: 1.5rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-    --space-2xl: 4rem;
-    --space-3xl: 6rem;
-    --space-4xl: 8rem;
+    /* Responsive spacing - Adaptés pour 1rem = 16px */
+    --space-xs: 0.3125rem;  /* 5px */
+    --space-sm: 0.625rem;   /* 10px */
+    --space-md: 0.9375rem;  /* 15px */
+    --space-lg: 1.25rem;    /* 20px */
+    --space-xl: 1.875rem;   /* 30px */
+    --space-2xl: 2.5rem;    /* 40px */
+    --space-3xl: 3.75rem;   /* 60px */
+    --space-4xl: 5rem;      /* 80px */
 }
 
 html {
-    font-size: 60%;
     scroll-behavior: smooth;
 }
 
@@ -56,13 +55,13 @@ html {
     overflow-x: hidden;
 }
 
-/* Menu icon - Mobile First */
+/* Menu icon */
 .menu-icon {
-    width: 4rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 1.25rem;
     position: fixed;
-    top: 2rem;
-    right: 2rem;
+    top: 1.25rem;
+    right: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -71,12 +70,13 @@ html {
 }
 
 .line {
-    height: 0.2rem;
+    height: 0.125rem;
     background: var(--main-color);
     transition: all 0.3s ease;
 }
 
-.line-1, .line-3 {
+.line-1,
+.line-3 {
     width: 100%;
 }
 
@@ -87,6 +87,10 @@ html {
 .menu-icon:hover .line-1,
 .menu-icon:hover .line-3 {
     width: 70%;
+}
+
+.menu-icon:hover .line-2 {
+    margin-left: 30%;
 }
 
 .navigate .menu-icon:hover .line-1,
@@ -100,7 +104,7 @@ html {
 
 .navigate .line-1 {
     width: 50%;
-    transform: translate(103%, 0.5rem) rotateZ(25deg);
+    transform: translate(103%, 0.3125rem) rotateZ(25deg);
 }
 
 .navigate .line-2 {
@@ -109,14 +113,10 @@ html {
 
 .navigate .line-3 {
     width: 50%;
-    transform: translate(103%, -0.5rem) rotateZ(-25deg);
+    transform: translate(103%, -0.3125rem) rotateZ(-25deg);
 }
 
-.menu-icon:hover .line-2 {
-    margin-left: 30%;
-}
-
-/* Navigation - Mobile CORRIGÉE */
+/* Navigation */
 .navigation {
     width: 100%;
     height: 100vh;
@@ -201,14 +201,14 @@ html {
 }
 
 .nav-items a:first-child {
-    padding-left: 6rem;
+    padding-left: 3.75rem;
     position: relative;
 }
 
 .nav-items a:first-child::before {
     content: '';
-    width: 4.8rem;
-    height: 0.2rem;
+    width: 3rem;
+    height: 0.125rem;
     background: var(--text-primary);
     position: absolute;
     top: 50%;
@@ -221,41 +221,40 @@ html {
     background: var(--main-color);
 }
 
-.nav-items a:hover, .nav-items a:hover span {
+.nav-items a:hover,
+.nav-items a:hover span {
     color: var(--main-color);
 }
 
-/* CORRECTION : Numéros plus grands et alignés */
 .nav-items a span {
     font-family: 'Cinzel', serif;
-    font-size: 5rem;
+    font-size: 3.125rem;
     font-weight: 900;
     color: var(--text-secondary);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.0625rem;
     position: relative;
     line-height: 1;
-    min-width: 8rem;
+    min-width: 5rem;
     flex-shrink: 0;
-    padding-bottom:1rem;
+    padding-bottom: 0.625rem;
 }
 
 .nav-items a span::before {
     content: '';
     width: 0;
-    height: 0.5rem;
+    height: 0.3125rem;
     background: var(--main-color);
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 0.3125rem;
     left: 0;
     transition: width 0.3s ease;
 }
-
 
 .nav-items a:hover span::before {
     width: 100%;
 }
 
-/* Header - Mobile */
+/* Header */
 header {
     width: 100%;
     min-height: 100vh;
@@ -267,11 +266,11 @@ header {
     padding: var(--space-lg);
 }
 
-/* Logo - Mobile */
+/* Logo */
 .logo {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: 1.25rem;
+    left: 1.25rem;
 }
 
 .logo h1 {
@@ -279,24 +278,15 @@ header {
     font-size: var(--font-4xl);
     font-style: italic;
     color: var(--main-color);
-    text-shadow: 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+    text-shadow: 0.1875rem 0.375rem rgba(0, 0, 0, 0.2);
 }
 
-/* Banner - Mobile */
+/* Banner */
 .banner {
+    position:absolute;
+    top: 12rem;
     text-align: center;
     padding: var(--space-2xl) var(--space-md);
-}
-
-.banner h3 {
-    font-size: var(--font-5xl);
-    letter-spacing: 0.5rem;
-    background-image: url('../images/text-bg-1.jpg');
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: var(--space-md);
 }
 
 .banner h2 {
@@ -307,6 +297,17 @@ header {
     margin-bottom: var(--space-sm);
 }
 
+.banner h3 {
+    font-size: var(--font-5xl);
+    letter-spacing: 0.3125rem;
+    background-image: url('../images/text-bg-1.jpg');
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: var(--space-md);
+}
+
 .banner h3 span {
     font-size: var(--font-5xl);
 }
@@ -315,15 +316,15 @@ header {
     font-size: var(--font-sm);
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1875rem;
     color: var(--main-color);
     margin-top: var(--space-lg);
 }
 
-/* Page header - Mobile */
+/* Page header */
 .page-header {
     width: 100%;
-    min-height: 30rem;
+    min-height: 18.75rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -333,12 +334,12 @@ header {
     padding: var(--space-3xl) var(--space-md);
 }
 
-/* Section styles - Mobile */
+/* Section styles */
 .section-heading-sm {
     font-size: var(--font-xs);
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1875rem;
     color: var(--main-color);
     text-align: center;
 }
@@ -347,7 +348,7 @@ header {
     font-size: var(--font-xl);
     font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.125rem;
     color: var(--text-primary);
     margin: var(--space-md) 0;
     text-align: center;
@@ -355,8 +356,8 @@ header {
 
 .section-border {
     width: 100%;
-    max-width: 20rem;
-    height: 0.1rem;
+    max-width: 12.5rem;
+    height: 0.0625rem;
     background: var(--border-color);
     margin: var(--space-md) auto;
     position: relative;
@@ -364,8 +365,8 @@ header {
 
 .section-border::after {
     content: '';
-    width: 4rem;
-    height: 0.5rem;
+    width: 2.5rem;
+    height: 0.3125rem;
     background: var(--main-color);
     position: absolute;
     top: 0;
@@ -373,7 +374,7 @@ header {
     transform: translateX(-50%);
 }
 
-/* About - Mobile */
+/* About section */
 .about {
     width: 100%;
     background: var(--bg-secondary);
@@ -395,7 +396,6 @@ header {
     gap: var(--space-sm);
 }
 
-
 .about-content-right {
     display: flex;
     flex-direction: column;
@@ -404,12 +404,13 @@ header {
     text-align: left;
 }
 
-.about-content-right .section-border{
+.about-content-right .section-border {
     margin: var(--space-md) 0;
 }
 
 .about-content-right .section-border::after {
     left: 0;
+    transform: none;
 }
 
 .section-num {
@@ -420,24 +421,24 @@ header {
 
 .section-num span {
     font-family: 'Cinzel', serif;
-    font-size: 8rem;
+    font-size: 10rem;
     font-weight: 900;
     background-image: url("../images/text-bg-2.jpg");
     background-size: cover;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    text-shadow: 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+    text-shadow: 0.1875rem 0.375rem rgba(0, 0, 0, 0.2);
     line-height: 1;
 }
 
 .main-btn {
     width: 100%;
-    max-width: 20rem;
-    height: 4rem;
+    max-width: 12.5rem;
+    height: 2.5rem;
     background: var(--main-color);
     border: none;
-    border-radius: 2rem;
+    border-radius: 1.25rem;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -445,7 +446,7 @@ header {
 }
 
 .main-btn:active {
-    transform: translateY(0.2rem);
+    transform: translateY(0.125rem);
 }
 
 .main-btn a {
@@ -454,7 +455,7 @@ header {
     font-size: var(--font-sm);
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.125rem;
     color: var(--text-primary);
     display: flex;
     justify-content: center;
@@ -469,7 +470,7 @@ header {
     max-width: 100%;
 }
 
-/* Books - Mobile */
+/* Books section */
 .books {
     width: 100%;
     padding: var(--space-3xl) var(--space-md);
@@ -495,7 +496,7 @@ header {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
     width: 100%;
-    max-width: 30rem;
+    max-width: 18.75rem;
 }
 
 .book {
@@ -507,11 +508,11 @@ header {
 
 .book img {
     width: 100%;
-    max-width: 25rem;
+    max-width: 15.625rem;
     height: auto;
     filter: grayscale(100%);
-    border-radius: 1rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    border-radius: 0.625rem;
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.3);
     cursor: pointer;
     transition: filter 0.5s ease;
 }
@@ -525,13 +526,13 @@ header {
     font-size: var(--font-sm);
     text-transform: uppercase;
     color: var(--main-color);
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3125rem;
     margin: var(--space-lg) 0 var(--space-md) 0;
 }
 
 .book-line {
-    width: 8rem;
-    height: 0.1rem;
+    width: 5rem;
+    height: 0.0625rem;
     background: rgba(255, 255, 255, 0.1);
     margin-bottom: var(--space-md);
 }
@@ -540,10 +541,10 @@ header {
     font-size: var(--font-md);
     text-transform: uppercase;
     color: var(--text-primary);
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.1875rem;
 }
 
-/* Testimonials - Mobile */
+/* Testimonials section */
 .testimonials {
     width: 100%;
     background-color: var(--bg-secondary);
@@ -566,7 +567,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 50rem;
+    max-width: 31.25rem;
 }
 
 .feedback-top {
@@ -578,11 +579,11 @@ header {
 }
 
 .feedback-top img {
-    width: 20rem;
-    height: 20rem;
+    width: 12.5rem;
+    height: 12.5rem;
     object-fit: cover;
-    border-radius: 1rem;
-    border: 0.5rem solid var(--bg-secondary);
+    border-radius: 0.625rem;
+    border: 0.3125rem solid var(--bg-secondary);
     filter: grayscale(100%);
     cursor: pointer;
     transition: filter 0.5s ease;
@@ -601,14 +602,14 @@ header {
 .feedback-heading h4 span {
     font-family: 'Kaushan Script', cursive;
     font-size: var(--font-3xl);
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.125rem;
     color: var(--main-color);
 }
 
 .quote {
     width: 100%;
     background-color: #282828;
-    border-radius: 2rem;
+    border-radius: 1.25rem;
     padding: var(--space-xl);
     text-align: center;
     position: relative;
@@ -631,7 +632,7 @@ header {
     font-size: var(--font-md);
     text-transform: uppercase;
     color: var(--text-primary);
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.125rem;
 }
 
 .quote-body p {
@@ -652,7 +653,7 @@ header {
     color: var(--main-color);
 }
 
-/* Footer - Mobile */
+/* Footer */
 footer {
     width: 100%;
     padding: var(--space-3xl) var(--space-md) var(--space-lg) var(--space-md);
@@ -696,7 +697,7 @@ footer {
     font-size: var(--font-md);
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.125rem;
     color: var(--text-primary);
 }
 
@@ -748,35 +749,35 @@ textarea {
     padding: var(--space-md);
     background-color: var(--bg-input);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.3125rem;
     font-size: var(--font-sm);
     color: var(--text-secondary);
 }
 
 .input-group input {
-    height: 4rem;
+    height: 2.5rem;
 }
 
 textarea {
-    height: 10rem;
+    height: 6.25rem;
     resize: none;
 }
 
 .footer-form button {
     width: 100%;
-    height: 4rem;
+    height: 2.5rem;
     background-color: var(--main-color);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.3125rem;
     font-weight: bold;
     color: var(--text-primary);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.0625rem;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
 .footer-form button:active {
-    transform: translateY(0.2rem);
+    transform: translateY(0.125rem);
 }
 
 .footer-bottom {
@@ -796,13 +797,14 @@ textarea {
 .footer-bottom button {
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 .footer-bottom button a {
     font-size: var(--font-sm);
     color: var(--text-secondary);
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.0625rem;
     display: flex;
     align-items: center;
     gap: var(--space-xs);
@@ -830,7 +832,7 @@ textarea {
 
 .loader {
     width: 40%;
-    height: 0.1rem;
+    height: 0.0625rem;
     background-color: #fff;
     transform: scaleX(0);
     animation: loader 5s 0.5s;
@@ -888,10 +890,6 @@ textarea {
 
 /* Small tablets and large phones (576px+) */
 @media (min-width: 36em) {
-    html {
-        font-size: 62.5%;
-    }
-
     .menu-icon {
         right: var(--space-xl);
         top: var(--space-xl);
@@ -904,7 +902,7 @@ textarea {
 
     .books-list {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 60rem;
+        max-width: 37.5rem;
     }
 
     .input-group {
@@ -937,13 +935,9 @@ textarea {
 
 /* Tablets (768px+) */
 @media (min-width: 48em) {
-    html {
-        font-size: 64%;
-    }
-
     .menu-icon {
-        right: 5rem;
-        top: 7rem;
+        right: 3.125rem;
+        top: 4.375rem;
     }
 
     .nav-left {
@@ -987,7 +981,7 @@ textarea {
 
     .books-list {
         grid-template-columns: repeat(3, 1fr);
-        max-width: 90rem;
+        max-width: 56.25rem;
     }
 
     .feedback-top {
@@ -1002,37 +996,34 @@ textarea {
 
 /* Desktop (1024px+) */
 @media (min-width: 64em) {
-    html {
-        font-size: 66%;
-    }
-
     :root {
-        --font-xs: 1.4rem;
-        --font-sm: 1.7rem;
-        --font-md: 2rem;
-        --font-lg: 2.4rem;
-        --font-xl: 2.8rem;
-        --font-2xl: 3.6rem;
-        --font-3xl: 4.8rem;
-        --font-4xl: 7rem;
-        --font-5xl: 9.5rem;
+        --font-xs: 0.875rem;
+        --font-sm: 1.0625rem;
+        --font-md: 1.25rem;
+        --font-lg: 1.5rem;
+        --font-xl: 1.75rem;
+        --font-2xl: 2.25rem;
+        --font-3xl: 3rem;
+        --font-4xl: 4.375rem;
+        --font-5xl: 5.9375rem;
     }
 
     .menu-icon {
-        right: 10rem;
-        top: 5rem;
+        right: 6.25rem;
+        top: 3.125rem;
     }
 
     .logo {
-        left: 15rem;
-        top: 3rem;
+        left: 9.375rem;
+        top: 1.875rem;
     }
 
     .banner {
         position: absolute;
-        right: 15rem;
-        bottom: 25rem;
+        right: 9.375rem;
+        bottom: 10.625rem;
         text-align: left;
+        max-width: 50%; /* Limite la largeur */
     }
 
     .about-content {
@@ -1081,63 +1072,51 @@ textarea {
 
 /* Large Desktop (1200px+) */
 @media (min-width: 75em) {
-    html {
-        font-size: 68%;
-    }
-
     :root {
-        --font-5xl: 10.5rem;
+        --font-5xl: 6.5625rem;
     }
 
     .menu-icon {
-        right: 15rem;
-        top: 7rem;
+        right: 9.375rem;
+        top: 4.375rem;
     }
 
     .logo {
-        left: 25rem;
+        left: 15.625rem;
     }
 
     .banner {
-        right: 20rem;
-        bottom: 30rem;
+        right: 12.5rem;
+        bottom: 18.75rem;
     }
 
     .section-border {
-        max-width: 50rem;
+        max-width: 31.25rem;
     }
 
     .about-content-right p {
-        max-width: 50rem;
+        max-width: 31.25rem;
     }
 }
 
 /* Extra Large Desktop (1440px+) */
 @media (min-width: 90em) {
-    html {
-        font-size: 70%;
-    }
-
     :root {
-        --font-5xl: 12rem;
+        --font-5xl: 7.5rem;
     }
 
     .banner h3 span {
-        font-size: 15rem;
+        font-size: 9.375rem;
     }
 }
 
 /* Ultra Wide (1600px+) */
 @media (min-width: 100em) {
-    html {
-        font-size: 72%;
-    }
-
     :root {
-        --font-5xl: 13rem;
+        --font-5xl: 8.125rem;
     }
 
     .banner h3 span {
-        font-size: 17rem;
+        font-size: 10.625rem;
     }
 }
